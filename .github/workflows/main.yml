@@ -34,6 +34,6 @@ jobs:
 
       # - name: Publicar artefatos (opcional)
         # uses: actions/upload-artifact@v3
-        with:
-          name: build-artifact
-          path: dist/  # Altere para o diretório gerado pelo build
+        # with:
+          # name: build-artifact
+          # path: dist/  # Altere para o diretório gerado pelo build
