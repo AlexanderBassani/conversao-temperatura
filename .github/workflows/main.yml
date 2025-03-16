@@ -32,8 +32,8 @@ jobs:
       - name: Construir o projeto (se necessário)
         run: npm run build  # Apenas se houver um comando de build
 
-      - name: Publicar artefatos (opcional)
-        uses: actions/upload-artifact@v3
+      # - name: Publicar artefatos (opcional)
+        # uses: actions/upload-artifact@v3
         with:
           name: build-artifact
           path: dist/  # Altere para o diretório gerado pelo build
