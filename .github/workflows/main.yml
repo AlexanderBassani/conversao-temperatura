@@ -39,7 +39,7 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags: |
-            alexanderba/aula-conversao-temperatura:v1
+            alexanderba/aula-conversao-temperatura:{{github.run_number}}
             alexanderba/aula-conversao-temperatura:latest
 
 
