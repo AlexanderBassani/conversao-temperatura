@@ -37,22 +37,20 @@ jobs:
           
       - name: execução dos testes
         run: mocha src/test/convert.js
-
+        
       - name: Docker Login
         # You may pin to the exact commit or the version.
         # uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772
         uses: docker/login-action@v3.4.0
         with:
-          username: ${{secrets.DOCKERHUB_USERNAME}}
-          password: ${{secrets.DOCKERHUB_PASSWORD}}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-      - name: construção imagem docker
-        # You may pin to the exact commit or the version.
-        # uses: docker/build-push-action@471d1dc4e07e5cdedd4c2171150001c434f0b7a4
+      - name: Construção da imagem Docker
         uses: docker/build-push-action@v6.15.0
         with:
           context: ./src
-          src: ./src/Dockerfile
+          file: ./src/Dockerfile  # Alterado de "src" para "file"
           push: true
           tags: |
             alexanderba/aula-conversao-temperatura:v1
