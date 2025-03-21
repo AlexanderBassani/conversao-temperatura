@@ -54,7 +54,7 @@ jobs:
           context: ./src
           src: ./src/Dockerfile
           push: true
-          tags:
+          tags: |
             alexanderba/aula-conversao-temperatura:v1
             alexanderba/aula-conversao-temperatura:latest
 
